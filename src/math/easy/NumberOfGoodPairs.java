@@ -9,20 +9,6 @@ public class NumberOfGoodPairs {
        return byCounting(nums);
     }
 
-    private int byCounting(int[] nums){
-        Map<Integer, Integer> counting = new HashMap<>();
-
-        for(int num: nums){
-            int count = counting.getOrDefault(num, 0);
-            counting.put(num, count);
-        }
-        int result = 0;
-        for (int count : counting.values()){
-            result += count * (count - 1) / 2;
-        }
-        return result;
-    }
-
     int solveByBruteForce(int [] nums){
         int goodPairs = 0;
         for(int i = 0; i < nums.length - 1; i++){
@@ -33,5 +19,19 @@ public class NumberOfGoodPairs {
             }
         }
         return goodPairs;
+    }
+
+    private int byCounting(int[] nums) {
+        Map<Integer, Integer> counting = new HashMap<>();
+
+        for (int num : nums) {
+            int count = counting.getOrDefault(num, 0);
+            counting.put(num, count);
+        }
+        int result = 0;
+        for (int count : counting.values()) {
+            result += count * (count - 1) / 2;
+        }
+        return result;
     }
 }
