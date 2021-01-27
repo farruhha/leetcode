@@ -16,11 +16,13 @@ public class SelfDividingNumber {
     }
 
     private boolean isSelfDividing(int number) {
-        String stringNumber = String.valueOf(number);
-        for(int index = 0; index < stringNumber.length(); index++){
-            int digit = Character.getNumericValue(stringNumber.charAt(index));
-            if (digit == 0) return false;
-            if (number % digit != 0) return false;
+        int originalDividend = number;
+        while (number > 0){
+            int divider = number % 10;
+            if (divider == 0 || originalDividend % divider != 0){
+                return false;
+            }
+            number /= 10;
         }
         return true;
     }
