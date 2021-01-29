@@ -2,7 +2,6 @@ package math.easy;
 
 public class AddDigits {
     public int addDigits(int num) {
-
         while(num >= 10){
             num = getDigitSums(num);
         }
