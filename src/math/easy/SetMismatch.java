@@ -8,12 +8,12 @@ public class SetMismatch {
         int sum = 0;
         Set<Integer> sets = new HashSet<>();
         int duplicate = -1;
-        for(int index = 0; index < nums.length; index++){
-            if(!sets.contains(nums[index])){
-                sum += nums[index];
-                sets.add(nums[index]);
-            }else{
-                duplicate = nums[index];
+        for (int num : nums) {
+            if (!sets.contains(num)) {
+                sum += num;
+                sets.add(num);
+            } else {
+                duplicate = num;
             }
         }
 
