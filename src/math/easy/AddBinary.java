@@ -5,7 +5,6 @@ public class AddBinary {
         int lengthOfA = a.length() - 1;
         int lengthOfB = b.length() - 1;
         int remainder = 0;
-
         StringBuilder result = new StringBuilder();
 
         while(lengthOfA >= 0 || lengthOfB >= 0){
