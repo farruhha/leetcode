@@ -5,6 +5,6 @@ import java.util.TreeSet;
 
 public class UglyNumber2 {
     public int nthUglyNumber(int n) {
-        return 0;
+        return 1;
     }
 }
